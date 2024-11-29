@@ -1,5 +1,7 @@
+using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +9,10 @@ public class PlayerController : MonoBehaviour
     private float flapForce = 1.2f;
     [SerializeField, Tooltip("How fast the bird moves across the screen.")]
     private float moveSpeed = 1.0f;
+    [SerializeField, Tooltip("The lower bounds of the screen.")]
+    private float minPosY = -0.6f;
+    [SerializeField, Tooltip("The upper bounds of the screen.")]
+    private float maxPosY = 0.6f;
 
     private Rigidbody2D rb2d;
 
@@ -26,6 +32,16 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Flap();
+    }
+
+    
+    private void FixedUpdate()
+    {
+        // Check if player is out of bounds and restart scene (TEMP)
+        if (transform.position.y > maxPosY || transform.position.y < minPosY)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
 
