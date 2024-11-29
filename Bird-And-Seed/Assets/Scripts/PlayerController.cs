@@ -37,7 +37,8 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        // Check if player is out of bounds and restart scene (TEMP)
+        // Check if player is out of bounds and restart scene
+        // TODO: Add a game over screen instead of restarting current scene
         if (transform.position.y > maxPosY || transform.position.y < minPosY)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -59,6 +60,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        // Check for any collision and restart scene
+        // TODO: Add a game over screen instead of restarting current scene
+        // TODO: Check collision object if pickups are added (coins, powers, etc.)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
