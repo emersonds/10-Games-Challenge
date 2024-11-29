@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb2d.AddForceY(flapForceScalar, ForceMode2D.Impulse);
+            rb2d.linearVelocity = new Vector2(rb2d.linearVelocityX, flapForceScalar);
         }
     }
 
