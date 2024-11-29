@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float flapForceScalar = 1.0f;
-    [SerializeField]
+    [SerializeField, Tooltip("How high the bird rises when it flaps.")]
+    private float flapForce = 1.2f;
+    [SerializeField, Tooltip("How fast the bird moves across the screen.")]
     private float moveSpeed = 1.0f;
 
     private Rigidbody2D rb2d;
@@ -12,24 +13,30 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Set rigidbody component
         rb2d = GetComponent<Rigidbody2D>();
+
+        // Set horizontal movement vector
+        // TODO: Move to fixed update to slowly ramp up speed as time goes on
+        rb2d.linearVelocityX = moveSpeed;
     }
 
 
+    // Update is called once per frame. Used for checking inputs.
     private void Update()
     {
-        Fly();
+        Flap();
     }
 
 
     /// <summary>
-    /// Applies a constant horizontal force, checks for a flap input to apply a vertical force
+    /// Checks for a flap input to apply a vertical force
     /// </summary>
-    private void Fly()
+    private void Flap()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb2d.linearVelocity = new Vector2(rb2d.linearVelocityX, flapForceScalar);
+            rb2d.linearVelocityY = flapForce;
         }
     }
 
