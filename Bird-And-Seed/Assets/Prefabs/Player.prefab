@@ -165,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b4a076a64627e4a9ce0ea11fe9c711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flapForceScalar: 1
+  flapForce: 1.2
   moveSpeed: 1
