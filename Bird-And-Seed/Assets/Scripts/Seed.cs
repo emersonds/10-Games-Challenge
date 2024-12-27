@@ -13,10 +13,4 @@ public class Seed : MonoBehaviour
 
         sr.sprite = sprites[Random.Range(0, sprites.Length)];
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

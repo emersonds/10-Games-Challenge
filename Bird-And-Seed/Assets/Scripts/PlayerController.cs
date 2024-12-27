@@ -65,4 +65,15 @@ public class PlayerController : MonoBehaviour
         // TODO: Check collision object if pickups are added (coins, powers, etc.)
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Seed collision
+        if (collision.gameObject.tag == "Seed")
+        {
+            // TODO: Add points when scoring is implemented
+            Destroy(collision.gameObject);
+        }
+    }
 }
