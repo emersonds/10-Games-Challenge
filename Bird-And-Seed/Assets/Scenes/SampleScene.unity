@@ -304,6 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741290634}
   - component: {fileID: 741290635}
+  - component: {fileID: 741290636}
   m_Layer: 0
   m_Name: TEMP_Background
   m_TagString: Untagged
@@ -381,6 +382,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &741290636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741290633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fd67c13652314ea87b7e74b86f1f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundObj: {fileID: 0}
 --- !u!1 &1320335667
 GameObject:
   m_ObjectHideFlags: 0
