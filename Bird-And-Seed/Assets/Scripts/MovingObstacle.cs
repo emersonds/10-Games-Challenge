@@ -13,9 +13,6 @@ public class MovingObstacle : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Assign random y pos and off-screen x pos
-        transform.position = new Vector3(2f, Random.Range(-0.3f, 0f));
-
         // Randomly spawn a seed in the middle of the obstacle
         // Seed is included in the prefab by default, remove it if false
         // Random.value returns a float between 0.0 and 1.0

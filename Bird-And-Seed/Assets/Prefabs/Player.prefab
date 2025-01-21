@@ -166,6 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flapForce: 1.2
-  moveSpeed: 1
+  moveSpeed: 0
   minPosY: -0.6
   maxPosY: 0.6
