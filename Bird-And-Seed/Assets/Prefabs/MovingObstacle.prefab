@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722418278c215b65e8245f3af1a96037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnHeight: 0
-  moveSpeedX: 0
+  moveSpeedX: -1
+  seed: {fileID: 40105380028447433}
 --- !u!50 &6865688947254965715
 Rigidbody2D:
   serializedVersion: 5
@@ -196,6 +196,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7efd094ec2c997498cca513bacb0db5, type: 3}
+--- !u!1 &40105380028447433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1499388811166683535, guid: a7efd094ec2c997498cca513bacb0db5, type: 3}
+  m_PrefabInstance: {fileID: 1459339506303134534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6964840693212969406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8424132881453978360, guid: a7efd094ec2c997498cca513bacb0db5, type: 3}
